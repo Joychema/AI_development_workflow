@@ -9,7 +9,7 @@ st.set_page_config(
 
 # load pre-trained sentiment analysis model
 def load_text_generator():
-    text_generator = pipeline("text-generation", model="gpt3")
+    text_generator = pipeline("text-generation", model="gpt2")
     text_generator.tokenizer.pad_token = text_generator.tokenizer.eos_token
     return text_generator
 
