@@ -25,7 +25,7 @@ Always respond in a polite and respectful manner.
 def build_conversation_prompt(user_input, chat_history):
     prompt = SYSTEM_PROMPT + "\n\n"
     for turn in chat_history:
-        prompt += f"User: {turn['user']}\nJojo: {turn['bot']}\n"
+        prompt += f"User: {turn['0']}\nJojo: {turn['1']}\n"
     prompt += f"User: {user_input}\nJojo: "
     return prompt
 
